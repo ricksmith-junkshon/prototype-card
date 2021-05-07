@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import Box from "./components/box";
+
+const names = ['OnDemand', 'Reserved 1yr', 'Reserved 3yr']
+const names2 = ['Average CPU', 'Peak CPU', 'Average Memory', 'Peak Memory']
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="container">
+        <Box names={names}/>
+        <Box names={names2}/>
+      </div>
     </div>
   );
 }
